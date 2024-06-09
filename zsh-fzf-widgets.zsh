@@ -65,7 +65,7 @@ fzf-history() {
       -n2..,..
       --tiebreak=index
       --bind=${ZSH_FZF_PASTE_KEY}:accept
-      --bind=\"${ZSH_FZF_EXEC_KEY}:execute@echo -\$(echo {} | sed -e 's/^ //')@+abort\"
+      --bind=\"${ZSH_FZF_EXEC_KEY}:become@echo -\$(echo {} | sed -e 's/^ //')@\"
       " ${=FZF_CMD}))
   if [ -n "$res" ]; then
     local num=$res[1]
